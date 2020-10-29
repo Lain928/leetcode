@@ -8,5 +8,6 @@ int main()
 	int b = a % 10;
 	cout << b << endl;
 	system("pause");
+	return 0;
 
 }
