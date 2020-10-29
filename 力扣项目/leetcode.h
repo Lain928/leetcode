@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 #include <unordered_map>
 #include <vector>
@@ -8,7 +8,7 @@ using namespace std;
 class leetcode
 {
 public:
-	//Á½ÊýÖ®ºÍ
+	//ä¸¤æ•°ä¹‹å’Œ
 	vector<int> leetcode_twoSum1(vector<int>& nums, int target);
 protected:
 private:
