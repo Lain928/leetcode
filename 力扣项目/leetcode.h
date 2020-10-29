@@ -8,6 +8,7 @@ using namespace std;
 class leetcode
 {
 public:
+	//两数之和
 	vector<int> leetcode_twoSum1(vector<int>& nums, int target);
 protected:
 private:
