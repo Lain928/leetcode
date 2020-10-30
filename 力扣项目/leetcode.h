@@ -4,6 +4,13 @@
 #include <vector>
 using namespace std;
 
+struct ListNode {
+	int val;
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
 
 class leetcode
 {
@@ -18,6 +25,8 @@ public:
 	int leet_romanToInt13(string s);
 	//14 最长公共前缀
 	string leet_longestCommonPrefix14(vector<string>& strs);
+	//合并两个有序链表
+	ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
 protected:
 private:
 	//13 罗马数字转换
@@ -99,6 +108,54 @@ std::string leetcode::leet_longestCommonPrefix14(vector<string>& strs)
 		result += strs[0][i];
 	}
 	return result;
+}
+
+ListNode* leetcode::mergeTwoLists(ListNode* l1, ListNode* l2)
+{
+	// 		if (l1 == nullptr)
+// 			return l2;
+// 		if (l2 == nullptr)
+// 			return l1;
+// 		ListNode* tmp = new ListNode(-1);
+// 		ListNode* res = tmp;
+// 
+// 		while (l1 != nullptr && l2 != nullptr)
+// 		{
+// 			if (l1->val > l2->val)
+// 			{
+// 				res->next = l2;
+// 				l2 = l2->next;
+// 				res = res->next;
+// 			}
+// 			else
+// 			{
+// 				res->next = l1;
+// 				l1 = l1->next;
+// 				res = res->next;
+// 			}
+// 		}
+// 		if (l1 == nullptr)
+// 			res->next = l2;
+// 		if (l2 == nullptr)
+// 			res->next = l1;
+// 		return tmp->next;
+
+	//递归形式
+	if (l1 == nullptr) {
+		return l2;
+	}
+	else if (l2 == nullptr) {
+		return l1;
+	}
+	else if (l1->val < l2->val) {
+		l1->next = mergeTwoLists(l1->next, l2);
+		return l1;
+	}
+	else {
+		l2->next = mergeTwoLists(l1, l2->next);
+		return l2;
+	}
+
 }
 
 int leetcode::change13(char var)
