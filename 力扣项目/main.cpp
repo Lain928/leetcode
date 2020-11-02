@@ -6,9 +6,10 @@ using namespace std;
 
 int main()
 {
-	int a = -321;
-	int b = a % 10;
-	cout << b << endl;
+	leetcode leet;
+	string str = leet.countAndSay38(4);
+	cout << str << endl;
+
 	system("pause");
 	return 0;
 

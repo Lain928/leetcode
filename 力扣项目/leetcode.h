@@ -27,6 +27,8 @@ public:
 	string leet_longestCommonPrefix14(vector<string>& strs);
 	//合并两个有序链表
 	ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
+	//38.外观数列
+	string countAndSay38(int n);
 protected:
 private:
 	//13 罗马数字转换
@@ -156,6 +158,25 @@ ListNode* leetcode::mergeTwoLists(ListNode* l1, ListNode* l2)
 		return l2;
 	}
 
+}
+
+std::string leetcode::countAndSay38(int n)
+{
+	if (n == 1)
+		return "1";
+	string str = countAndSay38(n - 1);
+	int pos = 0;
+	string res = "";
+	for (int i = 0; i < str.size(); i++)
+	{
+		if (i + 1 == str.size() || str[i] != str[i + 1])
+		{
+			res += (i + 1 - pos) + '0';
+			res += str[i];
+			pos = i + 1;
+		}
+	}
+	return res;
 }
 
 int leetcode::change13(char var)
