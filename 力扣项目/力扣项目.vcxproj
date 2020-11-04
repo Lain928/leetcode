@@ -184,6 +184,8 @@
     <ClCompile Include="剑指offer\61孩子们的游戏最后剩下的人.cpp" />
     <ClCompile Include="剑指offer\62求1到n的和.cpp" />
     <ClCompile Include="剑指offer\63不用加减乘除加法.cpp" />
+    <ClCompile Include="动态规划.cpp" />
+    <ClCompile Include="排序算法.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leetcode.h" />

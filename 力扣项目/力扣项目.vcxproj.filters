@@ -16,6 +16,12 @@
     <Filter Include="剑指offer">
       <UniqueIdentifier>{5ecbe62d-1dda-49a7-9fbf-c92da93ab11f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="动态规划">
+      <UniqueIdentifier>{0bc76eb1-af67-49d8-b643-a3b96c2dd041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="排序算法">
+      <UniqueIdentifier>{ef5dbc09-f9ed-4a2d-9582-1410137e9161}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leetcode.h">
@@ -157,6 +163,12 @@
     </ClCompile>
     <ClCompile Include="剑指offer\63不用加减乘除加法.cpp">
       <Filter>剑指offer</Filter>
+    </ClCompile>
+    <ClCompile Include="动态规划.cpp">
+      <Filter>动态规划</Filter>
+    </ClCompile>
+    <ClCompile Include="排序算法.cpp">
+      <Filter>排序算法</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
