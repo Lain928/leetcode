@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{31c4f0af-568e-44f0-b8cd-f0cb030368d2}</ProjectGuid>
-    <RootNamespace>力扣项目</RootNamespace>
+    <ProjectGuid>{fd93ac70-ac41-49a2-b01f-e62defa70935}</ProjectGuid>
+    <RootNamespace>排序算法</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -140,60 +140,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="剑指offer\20滑动窗口的最大值.cpp" />
-    <ClCompile Include="剑指offer\21旋转数组的最小数字.cpp" />
-    <ClCompile Include="剑指offer\22斐波那契数列.cpp" />
-    <ClCompile Include="剑指offer\23跳台阶.cpp" />
-    <ClCompile Include="剑指offer\24变态跳台阶.cpp" />
-    <ClCompile Include="剑指offer\25矩形覆盖.cpp" />
-    <ClCompile Include="剑指offer\26二进制中1的个数.cpp" />
-    <ClCompile Include="剑指offer\27数值的整数次方.cpp" />
-    <ClCompile Include="剑指offer\28调整数组顺序使奇数位于偶数之前.cpp" />
-    <ClCompile Include="剑指offer\29查找单链表倒数第k个位置上的结点.cpp" />
-    <ClCompile Include="剑指offer\30反转链表.cpp" />
-    <ClCompile Include="剑指offer\31合并两个排序的链表.cpp" />
-    <ClCompile Include="剑指offer\32树的子结构.cpp" />
-    <ClCompile Include="剑指offer\33二叉树的镜像.cpp" />
-    <ClCompile Include="剑指offer\34顺时针打印矩阵.cpp" />
-    <ClCompile Include="剑指offer\35包含min函数的栈.cpp" />
-    <ClCompile Include="剑指offer\36栈的压入和弹出序列.cpp" />
-    <ClCompile Include="剑指offer\37从上到下打印二叉树.cpp" />
-    <ClCompile Include="剑指offer\38二叉搜索树的后序遍历序列.cpp" />
-    <ClCompile Include="剑指offer\39二叉树中和为某一值的路径.cpp" />
-    <ClCompile Include="剑指offer\40复杂链表的复制.cpp" />
-    <ClCompile Include="剑指offer\41二叉搜索树与双向链表.cpp" />
-    <ClCompile Include="剑指offer\42字符串的排列.cpp" />
-    <ClCompile Include="剑指offer\43数组中出现次数超过一半的数字.cpp" />
-    <ClCompile Include="剑指offer\44最小的k个数.cpp" />
-    <ClCompile Include="剑指offer\45连续子数组的最大和.cpp" />
-    <ClCompile Include="剑指offer\46整数中出现1的次数.cpp" />
-    <ClCompile Include="剑指offer\47把数组排成最小的数.cpp" />
-    <ClCompile Include="剑指offer\48丑数.cpp" />
-    <ClCompile Include="剑指offer\49第一个只出现一次的字符的位置.cpp" />
-    <ClCompile Include="剑指offer\50数组中的逆序对.cpp" />
-    <ClCompile Include="剑指offer\51两个链表中第一个公共结点.cpp" />
-    <ClCompile Include="剑指offer\52数字在排序数组中出现的次数.cpp" />
-    <ClCompile Include="剑指offer\53二叉树的深度.cpp" />
-    <ClCompile Include="剑指offer\54平衡二叉树.cpp" />
-    <ClCompile Include="剑指offer\55数组中只出现一次的数字.cpp" />
-    <ClCompile Include="剑指offer\56和为S的连续整数序列.cpp" />
-    <ClCompile Include="剑指offer\57和为S的两个数字.cpp" />
-    <ClCompile Include="剑指offer\58左旋转字符串.cpp" />
-    <ClCompile Include="剑指offer\59翻转单词顺序列.cpp" />
-    <ClCompile Include="剑指offer\60扑克牌顺子.cpp" />
-    <ClCompile Include="剑指offer\61孩子们的游戏最后剩下的人.cpp" />
-    <ClCompile Include="剑指offer\62求1到n的和.cpp" />
-    <ClCompile Include="剑指offer\63不用加减乘除加法.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="leetcode.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="记录说明.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="剑指offer\kmeans.py" />
-    <None Include="剑指offer\总结.docx" />
+    <ClInclude Include="mysort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
