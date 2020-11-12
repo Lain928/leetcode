@@ -1,2 +1,52 @@
 1.使用std::pair<int, int> p1;
-pair是将2个数据组合成一个数据，当需要这样的需求时就可以使用pair，如stl中的map就是将key和value放在一起来保存。另一个应用是，当一个函数需要返回2个数据的时候，可以选择pair。 pair的实现是一个结构体，主要的两个成员变量是first second 因为是使用struct不是class，所以可以直接使用pair的成员变量。
+pair是将2个数据组合成一个数据，当需要这样的需求时就可以使用pair，如stl中的map就是将key和value放在一起来保存。
+另一个应用是，当一个函数需要返回2个数据的时候，可以选择pair。 
+pair的实现是一个结构体，主要的两个成员变量是first second 因为是使用struct不是class，所以可以直接使用pair的成员变量。
+定义：
+	std::pair<int, int> p1;
+访问两个数据：
+	p1.first = 1;
+	p1.second = 2.5;
+
+2.unordered_map的使用
+无序型存储，使用数组+链表的形式存储，可以快速查找到所数据（常数范围内），但是占用的内存高。
+Map 内部实现时红黑树，有序的，稳定的，占用内存少
+unordered_map使用方法：
+成员函数：
+===================迭代器====================
+begin | 返回指向容器起始位置的迭代器（iterator）
+end | 返回指向容器末尾位置的迭代器
+cbegin | 返回指向容器起始位置的常迭代器（const_iterator）
+cend | 返回指向容器末尾位置的常迭代器
+===================Capacity===================
+size 返回有效元素个数
+max_size 返回 unordered_map 支持的最大元素个数
+empty 判断是否为空
+===================元素访问===================
+operator[] 访问元素
+at 访问元素（如 m.at(5) = 3.33）
+===================元素修改===================
+insert 插入元素
+erase 删除元素
+swap 交换内容
+clear 清空内容
+emplace 构造及插入一个元素
+emplace_hint 按提示构造及插入一个元素
+=====================操作=====================
+find 通过给定主键查找元素
+count 返回匹配给定主键的元素的个数
+equal_range 返回值匹配给定搜索值的元素组成的范围
+===================Buckets====================
+bucket_count 返回槽（Bucket）数
+max_bucket_count 返回最大槽数
+bucket_size 返回槽大小
+bucket 返回元素所在槽的序号
+load_factor 返回载入因子，即一个元素槽（Bucket）的最大元素数
+max_load_factor 返回或设置最大载入因子
+rehash 设置槽数
+reserve 请求改变容器容量
+
+
+3.Std::list
+c.splise(pos,c2,c2pos)    将c2内的c2pos所指元素转移到c的pos所指位置
+C.splise(pos,c2,c2beg,c2end)    将c2区间[beg,end)内所有的元素转移到c内的pos之前
