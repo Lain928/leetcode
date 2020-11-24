@@ -50,3 +50,55 @@ reserve 请求改变容器容量
 3.Std::list
 c.splise(pos,c2,c2pos)    将c2内的c2pos所指元素转移到c的pos所指位置
 C.splise(pos,c2,c2beg,c2end)    将c2区间[beg,end)内所有的元素转移到c内的pos之前
+
+
+
+1.algorithm 头文件下的sort函数中 第三个形参的意义sort(begin, end, compare)
+
+2.掌握二叉搜索树 平衡二叉树
+
+3.回溯法
+
+4.指针做函数形参  指针引用*&
+
+5.https://github.com/dragen1860/Deep-Learning-with-TensorFlow-book
+
+6.string的赋值问题
+
+
+1.指针做函数形参
+void fun(int *p)  
+{  
+  *p = 20;
+}  
+int main(void)  
+{  
+    int a=1;   
+    func(&a);
+    return 0;  
+} 
+
+2.*& 指针引用
+指针是一个存放地址的变量，而指针引用指的是这个变量的引用，众所周知C++中如果参数不是引用的话会调用参数对象的拷贝构造函数，
+所以如果有需求想改变指针所指的对象（换句话说，就是要改变指针里面存的地址），就要使用指针引用。
+
+3 map hash_map unordered_map
+	1. map
+		内部数据的组织，基于红黑树实现，红黑树具有自动排序的功能，因此map内部所有的数据，在任何时候，都是有序的。
+
+	2. hash_map
+		基于哈希表，数据插入和查找的时间复杂度很低，几乎是常数时间，而代价是消耗比较多的内存。
+		底层实现上，使用一个下标范围比较大的数组来存储元素，形成很多的桶，利用hash函数对key进行映射到不同区域进行保存。
+
+	插入操作：得到key -> 通过hash函数得到hash值 -> 得到桶号(hash值对桶数求模) -> 存放key和value在桶内
+	取值过程：得到key -> 通过hash函数得到hash值 -> 得到桶号(hash值对桶数求模) -> 比较桶内元素与key是否相等 -> 取出相等纪录的value
+	当每个桶内只有一个元素时，查找时只进行一次比较，当很多桶都没有值时，查询更快。
+	用户可以指定自己的hash函数与比较函数。
+	
+	3. unordered_map
+		C++ 11标准中加入了unordered系列的容器。unordered_map记录元素的hash值，根据hash值判断元素是否相同。
+		无论从查找、插入上来说，unordered_map的效率都优于hash_map，更优于map；而空间复杂度方面，hash_map最低，unordered_map次之，map最大。
+		对于STL里的map容器，count方法与find方法，都可以用来判断一个key是否出现，count统计的是key出现的次数，因此只能为0/1，而find基于迭代器实现，以mp.end()判断是否找到要求的key。
+
+
+
